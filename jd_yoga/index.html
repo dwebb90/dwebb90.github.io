@@ -39,21 +39,21 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
+  <div class="mySlides w3-display-container w3-center w3-animate-fading">
     <img src="w3images/img1.jpg" style="width:100%">
     <div class="w3-display-left w3-container w3-text-white w3-padding-64 w3-hide-small w3-xlarge" style="width:50%; padding:50px">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       </p>   
     </div>
   </div>
-  <div class="mySlides w3-display-container w3-center">
+  <div class="mySlides w3-display-container w3-center w3-animate-fading">
     <img src="w3images/img2.jpg" style="width:100%">
     <div class="w3-display-left w3-container w3-text-white w3-padding-64 w3-hide-small w3-xlarge" style="width:50%; padding:50px">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       </p>    
     </div>
   </div>
-  <div class="mySlides w3-display-container w3-center">
+  <div class="mySlides w3-display-container w3-center w3-animate-fading">
     <img src="w3images/img3.jpg" style="width:100%">
     <div class="w3-display-left w3-container w3-text-white w3-padding-64 w3-hide-small w3-xlarge" style="width:50%; padding:50px">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -282,7 +282,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  setTimeout(carousel, 10000);    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
