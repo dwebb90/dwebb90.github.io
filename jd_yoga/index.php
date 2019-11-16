@@ -1,13 +1,13 @@
 <?php
 $msg = '';
 if ($_POST["submit"]) {
-
+    $echo"here"
     $sender = $_POST['Name'];
     $senderEmail = $_POST['Email'];
     $description = $_POST['Message'];
     $msgBody = "Name: ".$sender."\nEmail: ".$senderEmail."\n\nDescription: ".$description;
 
-    require 'php/class.phpmailer.php';
+    //require 'php/class.phpmailer.php';
     $mail = new PHPMailer;
     $mail->setFrom($senderEmail, $sender);
     $mail->addAddress('davo_33@hotmail.com', 'Dave');
