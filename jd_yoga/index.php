@@ -1,3 +1,27 @@
+<?php
+$msg = '';
+if ($_POST["submit"]) {
+    $echo"here"
+    $sender = $_POST['Name'];
+    $senderEmail = $_POST['Email'];
+    $description = $_POST['Message'];
+    $msgBody = "Name: ".$sender."\nEmail: ".$senderEmail."\n\nDescription: ".$description;
+
+    //require 'php/class.phpmailer.php';
+    $mail = new PHPMailer;
+    $mail->setFrom($senderEmail, $sender);
+    $mail->addAddress('davo_33@hotmail.com', 'Dave');
+    $mail->Subject = 'New message from website';
+    $mail->msgHTML(nl2br($msgBody));
+
+    if (!$mail->send()) {
+        $msg .= "Mailer Error: " . $mail->ErrorInfo;
+    } else {
+        $msg .= "Message Sent!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <title>jd_yoga</title>
@@ -239,17 +263,24 @@ During your stay at Yoga Pathshala you can expect a clean and comfortable enviro
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
       <div class="w3-col m6">
-        <form method="post" enctype="multipart/form-data">
+	<?php if (empty($msg)) { ?>
+
+        <form action="post" target="_blank">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="name">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="email">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
             </div>
-          </div> <input class="w3-input w3-border" type="text" placeholder="Message" required name="message"> 
-		<button class="w3-button w3-black w3-section w3-right" type="submit" value="sumbit">SEND</button>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit" value="submit">SEND</button>
         </form>
+	<?php } else {
+	    echo $msg;
+	} ?>
+
       </div>
     </div>
   </div>
