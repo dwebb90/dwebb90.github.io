@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>jd_yoga</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" style="padding:10px">
+    <div style="display:block; float:left; margin-left:40px;"><img src="../w3images/logo.jpg" height="60px" alt="logo image" ></div>  
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="../#" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div style="margin:auto; width:60%;"><a href="../#" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:25%">HOME</a>
+    <a href="../#training" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:25%">YOGA TEACHER TRAINING</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:25%">CURRICULUM</a>
+    <a href="../#teachers" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:25%">YOGA TEACHERS</a>
+    </div>
+    <a href="../#contact" class="w3-padding-large w3-hover-red w3-hide-small w3-right" style="text-decoration:none">CONTACT US</a>
+    	
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="../#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="../#training" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">YOGA TEACHER TRAINING</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CURRICULUM</a>
+  <a href="../#teachers" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">YOGA TEACHERS</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  
+    <!-- The About Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="band">
+    <h1 class="w3-wide">CURRICULUM</h1>
+    <a class="w3-right w3-padding" href="../#training" style="text-decoration:none"><b><< back</b></a>
+	<br>
+    <div class="w3-row w3-padding-32" style="padding-bottom:0!important">
+        <img src="../w3images/curric1.jpg" alt="Random Name" style="width:100%">
+</div>
+    <div class="w3-row w3-padding-32" style="padding-bottom:0!important">
+        <h2 class="w3-wide">200 HOUR YOGA TEACHER TRAINING</h2>
+        <h4 class="w3-wide w3-right">KATHMANDU VALLEY, NEPAL</h4>
+</div>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third" style="margin-top:20px">
+        <img src="../w3images/curric2.jpg" class="w3-margin-bottom" alt="Random Name" style="width:100%">
+      </div>
+      <div class="w3-rest w3-container">
+	<h4 class="w3-wide">200 HOUR YTT COURSE</h4> 
+	<p><i>Certified by Yoga Alliance</i></p>
+	<hr>
+	<p class="w3-justify">Dates:
+<ul>
+<li>1st-28th Feb 2020</li>
+<li>1st-28th Mar 2020</li>
+<li>1st-28th Apr 2020</li>
+<li>1st-28th May 2020</li>
+</ul>
+</p>
+<hr>
+<p class="w3-justify">
+Location:<br>
+Yoga Pathshala YTT School - Bhaktapur, Nepal
+</p>
+<hr>
+<p class="w3-justify">
+Price:<br>
+$1500 USD per person
+</p>
+<hr>
+<p class="w3-justify">
+Start your yoga journey by completing a booking enquiry here!</p><p>
+<a class="w3-button w3-right w3-blue" style="text-decoration:none;" href="../book/">BOOK NOW</a>
+</p>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
